@@ -50,7 +50,6 @@ COPY scripts/bootstrap.sh /
 
 RUN mkdir /jail
 
-RUN chmod +x scripts/bootstrap.sh
 
 EXPOSE 80 443 89
 
@@ -58,4 +57,5 @@ VOLUME /etc/letsencrypt
 
 ENV STAGING=false
 
+RUN chmod +x bootstrap.sh
 ENTRYPOINT ["/bootstrap.sh"]
