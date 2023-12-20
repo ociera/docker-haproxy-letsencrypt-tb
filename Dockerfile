@@ -1,5 +1,5 @@
 # start from debian 10 slim version
-FROM debian:bullseye-slim
+FROM debian:11-slim
 
 # install certbot, supervisor and utilities
 RUN apt-get update && apt-get install --no-install-recommends -yqq \
@@ -57,5 +57,4 @@ VOLUME /etc/letsencrypt
 
 ENV STAGING=false
 
-RUN chmod +x bootstrap.sh
 ENTRYPOINT ["/bootstrap.sh"]
