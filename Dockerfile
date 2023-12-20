@@ -1,5 +1,5 @@
 # start from debian 10 slim version
-FROM debian:11-slim
+FROM debian:bullseye-slim
 
 # install certbot, supervisor and utilities
 RUN apt-get update && apt-get install --no-install-recommends -yqq \
