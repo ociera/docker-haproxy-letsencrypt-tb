@@ -8,8 +8,8 @@ services:
             - EMAIL=my.mail
             - STAGING=false
         volumes:
-            - '$PWD/data/letsencrypt:/etc/letsencrypt'
-            - '$PWD/data/haproxy.cfg:/etc/haproxy/haproxy.cfg'
+            - './letsencrypt:/etc/letsencrypt'
+            - './haproxy.cfg:/etc/haproxy/haproxy.cfg'
         networks:
             - lbnet
         ports:

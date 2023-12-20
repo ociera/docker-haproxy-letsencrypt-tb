@@ -47,6 +47,7 @@ RUN crontab /var/crontab.txt && chmod 600 /etc/crontab \
 # cert creation script & bootstrap
 COPY scripts/certs.sh /
 COPY scripts/bootstrap.sh /
+RUN chmod +x /bootstrap.sh
 
 RUN mkdir /jail
 
