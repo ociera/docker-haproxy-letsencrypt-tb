@@ -100,7 +100,7 @@ for domain in ${renewed_certs[@]}; do
 done
 
 # soft-stop (y reinicio implícito) de HAProxy
-# (el comando de recarga no recarga los certificados)
+# (el comando RELOAD no recarga los certificados)
 if [ "${#renewed_certs[@]}" -gt 0 ]; then
   $HAPROXY_SOFTSTOP_CMD
   if [ $? -ne 0 ]; then
